@@ -1,0 +1,13 @@
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\LeagueOfLegend.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\LeagueOfLegend.pdb
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\Microsoft.Xna.Framework.Xact.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\ReLogic.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\bin\Debug\Terraria.exe
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\obj\Debug\LeagueOfLegend.csprojAssemblyReference.cache
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\obj\Debug\LeagueOfLegend.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\obj\Debug\LeagueOfLegend.csproj.CopyComplete
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\obj\Debug\LeagueOfLegend.dll
+C:\Users\PC\Documents\My Games\Terraria\ModLoader\Mod Sources\LeagueOfLegend\obj\Debug\LeagueOfLegend.pdb
