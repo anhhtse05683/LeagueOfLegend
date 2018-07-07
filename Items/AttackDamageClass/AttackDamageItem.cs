@@ -35,12 +35,34 @@ namespace LeagueOfLegend.Items.AttackDamageClass
         public override void GetWeaponDamage(Player player, ref int damage)
         {
             // Multiplies the damage by our custom damage multiplier
-            damage = (int)(damage * AttackDamagePlayer.ModPlayer(player).attackDamage + 5E-06F);
+            damage = (int)((damage + AttackDamagePlayer.ModPlayer(player).attackBonus) * (AttackDamagePlayer.ModPlayer(player).attackDamage));
         }
-        
-        public void AddDamageBonus(Player player, ref int damage)
+
+        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
         {
-            damage = (int)(damage + AttackDamagePlayer.ModPlayer(player).attackBonus);
+            if (Main.hardMode)
+            {
+                if(damage <= AttackDamagePlayer.ModPlayer(player).lethality)
+                {
+                    damage = (int)(damage + target.defense * 0.75f);
+                }
+                else
+                {
+                    damage = (int)(damage + AttackDamagePlayer.ModPlayer(player).lethality * 0.75f);
+                }
+            }
+            else
+            {
+                if (damage <= AttackDamagePlayer.ModPlayer(player).lethality)
+                {
+                    damage = (int)(damage + target.defense * 0.5f);
+                }
+                else
+                {
+                    damage = (int)(damage + AttackDamagePlayer.ModPlayer(player).lethality * 0.5f);
+                }
+            }
+            
         }
 
         public override void GetWeaponKnockback(Player player, ref float knockback)
@@ -68,7 +90,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
                 string damageValue = splitText.First();
                 string damageWord = splitText.Last();
                 // Change the tooltip text
-                tt.text = damageValue + " attack " + damageWord;
+                tt.text = string.Format("[c/0596aa:{0} attack {1}]", damageValue, damageWord);
             }
         }
     }

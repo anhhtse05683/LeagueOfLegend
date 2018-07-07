@@ -9,7 +9,7 @@ namespace LeagueOfLegend.NPCs
     {
         public override void NPCLoot(NPC npc)
         {
-            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Gold"), (int)Math.Ceiling(npc.value / 10));
+            Item.NewItem((int)Main.player[npc.lastInteraction].position.X, (int)Main.player[npc.lastInteraction].position.Y, Main.player[npc.lastInteraction].width, Main.player[npc.lastInteraction].height, mod.ItemType("Gold"), (int)Math.Ceiling(npc.value / 10));
         }
     }
 }

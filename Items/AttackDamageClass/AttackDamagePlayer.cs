@@ -23,6 +23,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
         public int attackBonus = 0;
         public float attackKnockback = 0f;
         public int attackCrit = 0;
+        public int lethality = 0;
 
         public override void ResetEffects()
         {
@@ -36,9 +37,11 @@ namespace LeagueOfLegend.Items.AttackDamageClass
 
         private void ResetVariables()
         {
+            attackBonus = 0;
             attackDamage = 1f;
             attackKnockback = 0f;
             attackCrit = 0;
+            lethality = 0;
         }
     }
 }

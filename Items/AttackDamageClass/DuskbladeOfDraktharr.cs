@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
+using LeagueOfLegend.Items.Accessories;
 
 namespace LeagueOfLegend.Items.AttackDamageClass
 {
@@ -32,6 +33,13 @@ namespace LeagueOfLegend.Items.AttackDamageClass
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.CaulfieldsWarhammer>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.SerratedDirk>());
+            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - CaulfieldsWarhammer.PRICE - SerratedDirk.PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

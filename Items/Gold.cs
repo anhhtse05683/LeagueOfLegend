@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
+using LeagueOfLegend.Items.Accessories;
 
 namespace LeagueOfLegend.Items
 {
@@ -22,17 +23,17 @@ namespace LeagueOfLegend.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.BamisCinder>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.BamisCinder>());
             recipe.SetResult(this, (int)Math.Ceiling(BamisCinder.PRICE * F));
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.RubyCrystal>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.RubyCrystal>());
             recipe.SetResult(this, (int)Math.Ceiling(RubyCrystal.PRICE * F));
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.ClothArmor>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.ClothArmor>());
             recipe.SetResult(this, (int)Math.Ceiling(ClothArmor.PRICE * F));
             recipe.AddRecipe();
         }
