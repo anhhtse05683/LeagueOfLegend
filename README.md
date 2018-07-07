@@ -1,1 +1,1 @@
-# tmodloader-league-of-legend
+# This is a mod for Terraria ModLoader.
