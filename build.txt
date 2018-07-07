@@ -1,0 +1,5 @@
+﻿displayName = League of Legend
+hideCode = false
+includeSource = true;
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = true;
