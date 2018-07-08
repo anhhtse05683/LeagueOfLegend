@@ -9,12 +9,13 @@ using Terraria.ID;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class ClothArmor : ModItem
+    public class Acc_ClothArmor : ModItem
     {
         public const int PRICE = 300;
 
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Cloth Armor");
             Tooltip.SetDefault(string.Format("[c/0596aa:+15 Armor]"));
         }
 

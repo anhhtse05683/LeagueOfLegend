@@ -23,11 +23,17 @@ namespace LeagueOfLegend.Projectiles
             projectile.penetrate = -1;
             projectile.ignoreWater = true;
             projectile.damage = 25;
+            projectile.tileCollide = false;
         }
 
         public override void AI()
         {
             projectile.Center = Main.LocalPlayer.Center;
+        }
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            target.AddBuff(BuffID.OnFire, 1); // sets enemy on fire for 1 second
         }
     }
 }

@@ -1,23 +1,23 @@
-﻿using LeagueOfLegend.Items.Accessories;
-using LeagueOfLegend.Items.AttackDamageClass;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
+using LeagueOfLegend.Items.AttackDamageClass;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class SerratedDirk : ModItem
+    public class Acc_LongSword : ModItem
     {
-        public const int PRICE = 1100;
+        public const int PRICE = 350;
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault(string.Format("[c/0596aa:+25 Attack Damage]" +
-                "\n[c/b99d66:UNIQUE Passive:] +10 Lethality"));
+            DisplayName.SetDefault("Long Sword");
+            Tooltip.SetDefault(string.Format("[c/0596aa:+10 Attack Damage]"));
         }
 
         public override void SetDefaults()
@@ -31,19 +31,12 @@ namespace LeagueOfLegend.Items.Accessories
             recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.LongSword>(), 2);
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - LongSword.PRICE * 2);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
         }
-
+        
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             AttackDamagePlayer modPlayer = AttackDamagePlayer.ModPlayer(player);
-            modPlayer.attackBonus += 25;
-            modPlayer.lethality += 10;
+            modPlayer.attackBonus += 10;
         }
     }
 }

@@ -8,12 +8,13 @@ using Terraria.ModLoader;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class SunfireCape : ModItem
+    public class Acc_SunfireCape : ModItem
     {
         public const int PRICE = 2900;
 
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Sunfire Cape");
             Tooltip.SetDefault(
                 string.Format("[c/0596aa:+450 Health]" +
                 "\n[c/0596aa:+60 Armor]" +
@@ -36,10 +37,10 @@ namespace LeagueOfLegend.Items.Accessories
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.ChainVest>());
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.RubyCrystal>());
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.BamisCinder>());
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), (PRICE - ChainVest.PRICE - RubyCrystal.PRICE - BamisCinder.PRICE));
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_ChainVest>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_RubyCrystal>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_BamisCinder>());
+            recipe.AddIngredient(mod.ItemType<Items.Gold>(), (PRICE - Acc_ChainVest.PRICE - Acc_RubyCrystal.PRICE - Acc_BamisCinder.PRICE));
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

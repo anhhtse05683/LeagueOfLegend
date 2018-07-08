@@ -66,16 +66,16 @@
     <Compile Include="Items\Accessories\Acc_DuskbladeOfDraktharr.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamageItem.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamagePlayer.cs" />
-    <Compile Include="Items\Accessories\CaulfieldsWarhammer.cs" />
+    <Compile Include="Items\Accessories\Acc_CaulfieldsWarhammer.cs" />
     <Compile Include="Items\AttackDamageClass\DuskbladeOfDraktharr.cs" />
-    <Compile Include="Items\Accessories\SerratedDirk.cs" />
-    <Compile Include="Items\Accessories\BamisCinder.cs" />
-    <Compile Include="Items\Accessories\ChainVest.cs" />
-    <Compile Include="Items\Accessories\ClothArmor.cs" />
+    <Compile Include="Items\Accessories\Acc_SerratedDirk.cs" />
+    <Compile Include="Items\Accessories\Acc_BamisCinder.cs" />
+    <Compile Include="Items\Accessories\Acc_ChainVest.cs" />
+    <Compile Include="Items\Accessories\Acc_ClothArmor.cs" />
     <Compile Include="Items\Gold.cs" />
-    <Compile Include="Items\Accessories\LongSword.cs" />
-    <Compile Include="Items\Accessories\RubyCrystal.cs" />
-    <Compile Include="Items\Accessories\SunfireCape.cs" />
+    <Compile Include="Items\Accessories\Acc_LongSword.cs" />
+    <Compile Include="Items\Accessories\Acc_RubyCrystal.cs" />
+    <Compile Include="Items\Accessories\Acc_SunfireCape.cs" />
     <Compile Include="LeagueOfLegend.cs" />
     <Compile Include="LeagueOfLegendPlayer.cs" />
     <Compile Include="NPCs\NpcDrops.cs" />
@@ -88,13 +88,7 @@
   <ItemGroup>
     <Content Include="build.txt" />
     <Content Include="Items\AttackDamageClass\DuskbladeOfDraktharr.png" />
-    <Content Include="Items\Accessories\BamisCinder.png" />
-    <Content Include="Items\Accessories\ChainVest.png" />
-    <Content Include="Items\Accessories\ClothArmor.png" />
     <Content Include="Items\Gold.png" />
-    <Content Include="Items\Accessories\LongSword.png" />
-    <Content Include="Items\Accessories\RubyCrystal.png" />
-    <Content Include="Items\Accessories\SunfireCape.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

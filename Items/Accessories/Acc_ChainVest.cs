@@ -1,23 +1,22 @@
-﻿using LeagueOfLegend.Items.Accessories;
-using LeagueOfLegend.Items.AttackDamageClass;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class CaulfieldsWarhammer : ModItem
+    public class Acc_ChainVest : ModItem
     {
-        public const int PRICE = 1100;
+        public const int PRICE = 800;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Caulfield's Warhammer");
-            Tooltip.SetDefault(string.Format("[c/0596aa:+25 Attack Damage]"));
+            DisplayName.SetDefault("Chain Vest");
+            Tooltip.SetDefault(string.Format("[c/0596aa:+40 Armor]"));
         }
 
         public override void SetDefaults()
@@ -28,21 +27,20 @@ namespace LeagueOfLegend.Items.Accessories
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE);
+            recipe.AddIngredient(mod.ItemType<Items.Gold>(), 800);
             recipe.SetResult(this);
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.LongSword>(), 2);
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - LongSword.PRICE * 2);
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_ClothArmor>());
+            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - Acc_ClothArmor.PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            AttackDamagePlayer modPlayer = AttackDamagePlayer.ModPlayer(player);
-            modPlayer.attackBonus += 25;
+            player.statDefense += 40;
         }
 
     }

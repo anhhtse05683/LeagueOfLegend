@@ -23,18 +23,18 @@ namespace LeagueOfLegend.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.BamisCinder>());
-            recipe.SetResult(this, (int)Math.Ceiling(BamisCinder.PRICE * F));
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_BamisCinder>());
+            recipe.SetResult(this, (int)Math.Ceiling(Acc_BamisCinder.PRICE * F));
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.RubyCrystal>());
-            recipe.SetResult(this, (int)Math.Ceiling(RubyCrystal.PRICE * F));
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_RubyCrystal>());
+            recipe.SetResult(this, (int)Math.Ceiling(Acc_RubyCrystal.PRICE * F));
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.ClothArmor>());
-            recipe.SetResult(this, (int)Math.Ceiling(ClothArmor.PRICE * F));
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_ClothArmor>());
+            recipe.SetResult(this, (int)Math.Ceiling(Acc_ClothArmor.PRICE * F));
             recipe.AddRecipe();
         }
     }

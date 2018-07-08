@@ -3,39 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Terraria;
 using Terraria.ModLoader;
+using Terraria;
 using Terraria.ID;
-using LeagueOfLegend.Items.AttackDamageClass;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class LongSword : ModItem
+    public class Acc_RubyCrystal : ModItem
     {
-        public const int PRICE = 350;
+        public const int PRICE = 400;
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault(string.Format("[c/0596aa:+10 Attack Damage]"));
+            DisplayName.SetDefault("Ruby Crystal");
+            Tooltip.SetDefault(string.Format("[c/0596aa:+150 Health]"));
         }
 
         public override void SetDefaults()
         {
+            item.width = 16;
+            item.height = 16;
+            item.maxStack = 1;
+            item.value = 400;
+            item.rare = 1;
             item.accessory = true;
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE);
+            recipe.AddIngredient(mod.ItemType("Gold"), PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-        
+
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            AttackDamagePlayer modPlayer = AttackDamagePlayer.ModPlayer(player);
-            modPlayer.attackBonus += 10;
+            player.statLifeMax2 += 150;
         }
     }
 }

@@ -12,5 +12,14 @@ namespace LeagueOfLegend.Buffs
 {
     public class ImmolateBuff : ModBuff
     {
+
+        public override void SetDefaults()
+        {
+        }
+
+        public override void Update(Player player, ref int buffIndex)
+        {
+            mod.ProjectileType<Projectiles.ImmolateProjectile>();
+        }
     }
 }

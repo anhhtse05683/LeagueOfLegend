@@ -37,9 +37,9 @@ namespace LeagueOfLegend.Items.AttackDamageClass
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.CaulfieldsWarhammer>());
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.SerratedDirk>());
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - CaulfieldsWarhammer.PRICE - SerratedDirk.PRICE);
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_CaulfieldsWarhammer>());
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_SerratedDirk>());
+            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - Acc_CaulfieldsWarhammer.PRICE - Acc_SerratedDirk.PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

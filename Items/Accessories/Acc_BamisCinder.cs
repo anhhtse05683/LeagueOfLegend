@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class BamisCinder : ModItem
+    public class Acc_BamisCinder : ModItem
     {
         public const int PRICE = 900;
 
@@ -30,8 +30,8 @@ namespace LeagueOfLegend.Items.Accessories
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Items.Accessories.RubyCrystal>(), 1);
-            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - RubyCrystal.PRICE);
+            recipe.AddIngredient(mod.ItemType<Items.Accessories.Acc_RubyCrystal>(), 1);
+            recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - Acc_RubyCrystal.PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
@@ -39,6 +39,7 @@ namespace LeagueOfLegend.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.statLifeMax2 += 200;
+            player.AddBuff(mod.BuffType<Buffs.ImmolateBuff>(), 2);
         }
     }
 }
