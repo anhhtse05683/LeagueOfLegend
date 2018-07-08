@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buffs\ImmolateBuff.cs" />
     <Compile Include="Items\Accessories\Acc_DuskbladeOfDraktharr.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamageItem.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamagePlayer.cs" />
@@ -78,11 +79,11 @@
     <Compile Include="LeagueOfLegend.cs" />
     <Compile Include="LeagueOfLegendPlayer.cs" />
     <Compile Include="NPCs\NpcDrops.cs" />
+    <Compile Include="Projectiles\ImmolateProjectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Items\Weapons\" />
-    <Folder Include="Projectiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build.txt" />

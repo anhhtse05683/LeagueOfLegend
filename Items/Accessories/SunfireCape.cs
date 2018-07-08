@@ -48,7 +48,8 @@ namespace LeagueOfLegend.Items.Accessories
         {
             player.statLifeMax2 += 450;
             player.statDefense += 60;
+            mod.ProjectileType<Projectiles.ImmolateProjectile>();
         }
-
+        
     }
 }
