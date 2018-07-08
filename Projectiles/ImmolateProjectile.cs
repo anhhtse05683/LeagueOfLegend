@@ -12,6 +12,13 @@ namespace LeagueOfLegend.Projectiles
 {
     public class ImmolateProjectile : ModProjectile
     {
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Immolate");
+            Main.projFrames[projectile.type] = 1;
+        }
+
         public override void SetDefaults()
         {
             projectile.width = 256;
@@ -19,21 +26,32 @@ namespace LeagueOfLegend.Projectiles
             projectile.friendly = true;
             projectile.magic = true;
             projectile.timeLeft = 1;
-            projectile.aiStyle = 0;
             projectile.penetrate = -1;
             projectile.ignoreWater = true;
-            projectile.damage = 25;
             projectile.tileCollide = false;
+            projectile.light = 0.2f;
+            projectile.aiStyle = 0;
+            projectile.timeLeft = 1;
         }
 
         public override void AI()
         {
+
+            Player player = Main.player[projectile.owner];
+            LeagueOfLegendPlayer modPlayer = player.GetModPlayer<LeagueOfLegendPlayer>(mod);
+            
+            if (!player.active || player.dead || !modPlayer.immolate)
+            {
+                projectile.Kill();
+                return;
+            }
+
             projectile.Center = Main.LocalPlayer.Center;
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(BuffID.OnFire, 1); // sets enemy on fire for 1 second
+            target.AddBuff(BuffID.OnFire, 1); // sets enemy on fire for 1 tick
         }
     }
 }

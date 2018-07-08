@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buffs\ImmolateBuff.cs" />
     <Compile Include="Items\Accessories\Acc_DuskbladeOfDraktharr.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamageItem.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamagePlayer.cs" />
@@ -83,6 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Buffs\" />
     <Folder Include="Items\Weapons\" />
   </ItemGroup>
   <ItemGroup>

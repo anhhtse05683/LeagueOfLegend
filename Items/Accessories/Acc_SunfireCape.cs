@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.GameInput;
 
 namespace LeagueOfLegend.Items.Accessories
 {
     public class Acc_SunfireCape : ModItem
     {
         public const int PRICE = 2900;
+        public const int baseDamage = 25;
 
         public override void SetStaticDefaults()
         {
@@ -49,7 +54,18 @@ namespace LeagueOfLegend.Items.Accessories
         {
             player.statLifeMax2 += 450;
             player.statDefense += 60;
-            mod.ProjectileType<Projectiles.ImmolateProjectile>();
+            player.GetModPlayer<LeagueOfLegendPlayer>(mod).immolate = true;
+
+            LeagueOfLegendPlayer modPlayer = player.GetModPlayer<LeagueOfLegendPlayer>(mod);
+
+            int damage = baseDamage + (player.statLifeMax + player.statLifeMax2) / 100;
+
+            if(Main.player[Player.FindClosest(player.position, player.width, player.height)].ZoneDesert)
+            {
+                damage += damage;
+            }
+
+            Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, mod.ProjectileType<Projectiles.ImmolateProjectile>(), damage, 0f, player.whoAmI);
         }
         
     }
