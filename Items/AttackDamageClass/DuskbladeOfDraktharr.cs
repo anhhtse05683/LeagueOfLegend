@@ -15,7 +15,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
 
         public override void SetStaticDefaults()
         {
-
+            Tooltip.SetDefault(string.Format("[c/b99d66:UNIQUE Passive:] +18 Lethality"));
         }
         public override void SafeSetDefaults()
         {
@@ -42,6 +42,12 @@ namespace LeagueOfLegend.Items.AttackDamageClass
             recipe.AddIngredient(mod.ItemType<Items.Gold>(), PRICE - Acc_CaulfieldsWarhammer.PRICE - Acc_SerratedDirk.PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
+        }
+
+        public override void HoldItem(Player player)
+        {
+            AttackDamagePlayer modPlayer = AttackDamagePlayer.ModPlayer(player);
+            modPlayer.lethality += 18;
         }
     }
 }

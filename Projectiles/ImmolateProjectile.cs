@@ -21,17 +21,18 @@ namespace LeagueOfLegend.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 256;
-            projectile.height = 256;
+            projectile.width = 137;
+            projectile.height = 137;
             projectile.friendly = true;
             projectile.magic = true;
             projectile.timeLeft = 1;
             projectile.penetrate = -1;
-            projectile.ignoreWater = true;
+            projectile.ignoreWater = false;
             projectile.tileCollide = false;
             projectile.light = 0.2f;
             projectile.aiStyle = 0;
-            projectile.timeLeft = 1;
+            projectile.timeLeft = 2;
+            projectile.Opacity = 0.5f;
         }
 
         public override void AI()
@@ -40,18 +41,20 @@ namespace LeagueOfLegend.Projectiles
             Player player = Main.player[projectile.owner];
             LeagueOfLegendPlayer modPlayer = player.GetModPlayer<LeagueOfLegendPlayer>(mod);
             
-            if (!player.active || player.dead || !modPlayer.immolate)
+            if (!player.active || player.dead || !modPlayer.immolate || Main.raining)
             {
                 projectile.Kill();
                 return;
             }
 
             projectile.Center = Main.LocalPlayer.Center;
+            // projectile.rotation = 10;
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(BuffID.OnFire, 1); // sets enemy on fire for 1 tick
+            projectile.vampireHeal(projectile.damage, target.Center);
         }
     }
 }

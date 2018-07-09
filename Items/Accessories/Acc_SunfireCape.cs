@@ -15,7 +15,6 @@ namespace LeagueOfLegend.Items.Accessories
     public class Acc_SunfireCape : ModItem
     {
         public const int PRICE = 2900;
-        public const int baseDamage = 25;
 
         public override void SetStaticDefaults()
         {
@@ -26,7 +25,7 @@ namespace LeagueOfLegend.Items.Accessories
                 "\n[c/b99d66:UNIQUE Passive - Immolate:]") +
                 "\nDeals 25(+1 per 100 player's health)" +
                 "\nmagic damage per second to nearby enemies." +
-                "\nDeals 100% bonus damage while in desert biome.");
+                "\nDeals 50% bonus damage while in desert biome.");
         }
 
         public override void SetDefaults()
@@ -54,18 +53,11 @@ namespace LeagueOfLegend.Items.Accessories
         {
             player.statLifeMax2 += 450;
             player.statDefense += 60;
+
+
             player.GetModPlayer<LeagueOfLegendPlayer>(mod).immolate = true;
 
-            LeagueOfLegendPlayer modPlayer = player.GetModPlayer<LeagueOfLegendPlayer>(mod);
-
-            int damage = baseDamage + (player.statLifeMax + player.statLifeMax2) / 100;
-
-            if(Main.player[Player.FindClosest(player.position, player.width, player.height)].ZoneDesert)
-            {
-                damage += damage;
-            }
-
-            Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, mod.ProjectileType<Projectiles.ImmolateProjectile>(), damage, 0f, player.whoAmI);
+            player.GetModPlayer<LeagueOfLegendPlayer>(mod).immolateTimer++;
         }
         
     }

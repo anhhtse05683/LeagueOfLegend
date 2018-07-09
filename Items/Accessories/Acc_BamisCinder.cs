@@ -7,7 +7,6 @@ namespace LeagueOfLegend.Items.Accessories
     public class Acc_BamisCinder : ModItem
     {
         public const int PRICE = 900;
-        public const int baseDamage = 25;
 
         public override void SetStaticDefaults()
         {
@@ -41,6 +40,8 @@ namespace LeagueOfLegend.Items.Accessories
         {
             player.statLifeMax2 += 200;
             
+            player.GetModPlayer<LeagueOfLegendPlayer>(mod).immolate = true;
+
         }
     }
 }

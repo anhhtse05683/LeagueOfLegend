@@ -17,7 +17,7 @@ namespace LeagueOfLegend.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Long Sword");
-            Tooltip.SetDefault(string.Format("[c/0596aa:+10 Attack Damage]"));
+            Tooltip.SetDefault(string.Format("[c/FF8C00:+10 Attack Damage]"));
         }
 
         public override void SetDefaults()

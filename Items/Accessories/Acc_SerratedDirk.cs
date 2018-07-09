@@ -16,7 +16,7 @@ namespace LeagueOfLegend.Items.Accessories
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault(string.Format("[c/0596aa:+25 Attack Damage]" +
+            Tooltip.SetDefault(string.Format("[c/FF8C00:+25 Attack Damage]" +
                 "\n[c/b99d66:UNIQUE Passive:] +10 Lethality"));
         }
 

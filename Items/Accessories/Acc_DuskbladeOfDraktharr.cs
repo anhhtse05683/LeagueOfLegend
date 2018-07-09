@@ -16,7 +16,7 @@ namespace LeagueOfLegend.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Duskblade of Draktharr");
-            Tooltip.SetDefault(string.Format("[c/0596aa:+55 Attack Damage]" +
+            Tooltip.SetDefault(string.Format("[c/FF8C00:+55 Attack Damage]" +
                 "\n[c/b99d66:UNIQUE Passive:] +18 Lethality"));
         }
 

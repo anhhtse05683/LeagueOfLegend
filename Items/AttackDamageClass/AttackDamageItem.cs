@@ -38,33 +38,58 @@ namespace LeagueOfLegend.Items.AttackDamageClass
             damage = (int)((damage + AttackDamagePlayer.ModPlayer(player).attackBonus) * (AttackDamagePlayer.ModPlayer(player).attackDamage));
         }
 
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+        public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
         {
             if (Main.hardMode)
             {
-                if(damage <= AttackDamagePlayer.ModPlayer(player).lethality)
+                int blockedDamage = (int)Math.Floor(target.defense * 0.75f);
+
+                if (damage <= AttackDamagePlayer.ModPlayer(player).lethality)
                 {
-                    damage = (int)(damage + target.defense * 0.75f);
+                    damage = (int)(damage + blockedDamage);
                 }
                 else
                 {
-                    damage = (int)(damage + AttackDamagePlayer.ModPlayer(player).lethality * 0.75f);
+                    int nonLethalityDamage = damage - AttackDamagePlayer.ModPlayer(player).lethality;
+
+                    if (nonLethalityDamage <= blockedDamage)
+                    {
+                        nonLethalityDamage = 1;
+                    }
+                    else
+                    {
+                        nonLethalityDamage -= blockedDamage;
+                    }
+
+                    damage = (int)(nonLethalityDamage + AttackDamagePlayer.ModPlayer(player).lethality + blockedDamage);
                 }
             }
             else
             {
+                int blockedDamage = (int)Math.Floor(target.defense * 0.5f);
+
                 if (damage <= AttackDamagePlayer.ModPlayer(player).lethality)
                 {
-                    damage = (int)(damage + target.defense * 0.5f);
+                    damage = (int)(damage + blockedDamage);
                 }
                 else
                 {
-                    damage = (int)(damage + AttackDamagePlayer.ModPlayer(player).lethality * 0.5f);
+                    int nonLethalityDamage = damage - AttackDamagePlayer.ModPlayer(player).lethality;
+
+                    if (nonLethalityDamage <= blockedDamage)
+                    {
+                        nonLethalityDamage = 1;
+                    }
+                    else
+                    {
+                        nonLethalityDamage -= blockedDamage;
+                    }
+
+                    damage = (int)(nonLethalityDamage + AttackDamagePlayer.ModPlayer(player).lethality + blockedDamage);
                 }
             }
-            
         }
-
+        
         public override void GetWeaponKnockback(Player player, ref float knockback)
         {
             // Adds knockback bonuses
@@ -90,7 +115,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
                 string damageValue = splitText.First();
                 string damageWord = splitText.Last();
                 // Change the tooltip text
-                tt.text = string.Format("[c/0596aa:{0} attack {1}]", damageValue, damageWord);
+                tt.text = string.Format("[c/FF8C00:{0} attack {1}]", damageValue, damageWord);
             }
         }
     }
