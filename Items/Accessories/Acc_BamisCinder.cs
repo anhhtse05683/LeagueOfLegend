@@ -12,7 +12,8 @@ namespace LeagueOfLegend.Items.Accessories
         {
             DisplayName.SetDefault("Bami's Cinder");
             Tooltip.SetDefault(
-                string.Format("[c/0596aa:+150 Health]\n[c/b99d66:UNIQUE Passive - Immolate:]") +
+                string.Format("[c/0596aa:+150 Health]" +
+                "\n[c/b99d66:UNIQUE Passive - Immolate:]") +
                 "\nDeals 5(+1 per 100 player's health)" +
                 "\nmagic damage per second to nearby enemies." +
                 "\nDeals 100% bonus damage while in desert biome.");

@@ -21,18 +21,18 @@ namespace LeagueOfLegend.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 137;
-            projectile.height = 137;
+            projectile.width = 256;
+            projectile.height = 256;
             projectile.friendly = true;
             projectile.magic = true;
             projectile.timeLeft = 1;
             projectile.penetrate = -1;
-            projectile.ignoreWater = false;
+            projectile.ignoreWater = true; // because Sunfire Cape emit heat wave
             projectile.tileCollide = false;
             projectile.light = 0.2f;
             projectile.aiStyle = 0;
             projectile.timeLeft = 2;
-            projectile.Opacity = 0.5f;
+            // projectile.Opacity = 0.5f;
         }
 
         public override void AI()
@@ -40,7 +40,7 @@ namespace LeagueOfLegend.Projectiles
 
             Player player = Main.player[projectile.owner];
             LeagueOfLegendPlayer modPlayer = player.GetModPlayer<LeagueOfLegendPlayer>(mod);
-            
+
             if (!player.active || player.dead || !modPlayer.immolate || Main.raining)
             {
                 projectile.Kill();

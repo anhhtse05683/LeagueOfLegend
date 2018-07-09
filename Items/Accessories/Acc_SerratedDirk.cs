@@ -18,6 +18,7 @@ namespace LeagueOfLegend.Items.Accessories
         {
             Tooltip.SetDefault(string.Format("[c/FF8C00:+25 Attack Damage]" +
                 "\n[c/b99d66:UNIQUE Passive:] +10 Lethality"));
+            DisplayName.SetDefault("Serrated Dirk");
         }
 
         public override void SetDefaults()

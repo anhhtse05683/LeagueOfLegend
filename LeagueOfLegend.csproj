@@ -62,7 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items\Accessories\Acc_CatalystOfAeons.cs" />
     <Compile Include="Items\Accessories\Acc_DuskbladeOfDraktharr.cs" />
+    <Compile Include="Items\Accessories\Acc_SapphireCrystal.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamageItem.cs" />
     <Compile Include="Items\AttackDamageClass\AttackDamagePlayer.cs" />
     <Compile Include="Items\Accessories\Acc_CaulfieldsWarhammer.cs" />

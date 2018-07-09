@@ -22,6 +22,7 @@ namespace LeagueOfLegend.Items.Accessories
             Tooltip.SetDefault(
                 string.Format("[c/0596aa:+450 Health]" +
                 "\n[c/0596aa:+60 Armor]" +
+                "\n" +
                 "\n[c/b99d66:UNIQUE Passive - Immolate:]") +
                 "\nDeals 25(+1 per 100 player's health)" +
                 "\nmagic damage per second to nearby enemies." +
@@ -56,8 +57,6 @@ namespace LeagueOfLegend.Items.Accessories
 
 
             player.GetModPlayer<LeagueOfLegendPlayer>(mod).immolate = true;
-
-            player.GetModPlayer<LeagueOfLegendPlayer>(mod).immolateTimer++;
         }
         
     }
