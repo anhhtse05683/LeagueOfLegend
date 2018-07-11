@@ -40,6 +40,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
 
         public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
         {
+
             if (Main.hardMode)
             {
                 int blockedDamage = (int)Math.Floor(target.defense * 0.75f);

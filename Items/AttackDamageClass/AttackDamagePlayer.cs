@@ -24,6 +24,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
         public float attackKnockback = 0f;
         public int attackCrit = 0;
         public int lethality = 0;
+        
 
         public override void ResetEffects()
         {
