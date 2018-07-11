@@ -23,12 +23,13 @@ namespace LeagueOfLegend.NPCs
 			aiType = 77;
 			npc.width = 36;
 			npc.height = 44;
-			animationType = 482;
+			//animationType = 482;
 			npc.aiStyle = 3;
 			npc.npcSlots = 0.9f;
 			npc.HitSound = SoundID.NPCHit4;
 			npc.DeathSound = SoundID.NPCDeath6;
 			npc.value = Item.buyPrice(0, 0, 4, 9);
+            animationType = NPCID.PurpleSlime;
 		}
 
 		public override void HitEffect(int hitDirection, double damage)
@@ -48,7 +49,7 @@ namespace LeagueOfLegend.NPCs
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.OverworldDay.Chance * 5.0f;
+            return SpawnCondition.Overworld.Chance * 1f;
         }
     }	
 }

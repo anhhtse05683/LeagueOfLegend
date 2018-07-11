@@ -80,7 +80,7 @@
     <Compile Include="Items\Accessories\Acc_SunfireCape.cs" />
     <Compile Include="LeagueOfLegend.cs" />
     <Compile Include="LeagueOfLegendPlayer.cs" />
-    <Compile Include="NPCs\minionblue.cs" />
+    <Compile Include="NPCs\MinionBlue.cs" />
     <Compile Include="NPCs\NpcDrops.cs" />
     <Compile Include="Projectiles\ImmolateProjectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,7 +97,7 @@
     <Content Include="Gores\minionblueGore4.png" />
     <Content Include="Items\AttackDamageClass\DuskbladeOfDraktharr.png" />
     <Content Include="Items\Gold.png" />
-    <Content Include="NPCs\minionblue.png" />
+    <Content Include="NPCs\MinionBlue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

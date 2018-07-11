@@ -38,6 +38,11 @@ namespace LeagueOfLegend.Items.AttackDamageClass
             damage = (int)((damage + AttackDamagePlayer.ModPlayer(player).attackBonus) * (AttackDamagePlayer.ModPlayer(player).attackDamage));
         }
 
+        public override float MeleeSpeedMultiplier(Player player)
+        {
+            return AttackDamagePlayer.ModPlayer(player).attackSpeed;
+        }
+
         public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
         {
 

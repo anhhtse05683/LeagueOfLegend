@@ -23,8 +23,8 @@ namespace LeagueOfLegend.Items.AttackDamageClass
             item.crit = 0;
             item.knockBack = 0;
             item.useStyle = 1;
-            item.useAnimation = 10;
-            item.useTime = 10;
+            item.useTime = 60;
+            item.useAnimation = 60;
             item.autoReuse = true;
             item.useTurn = true;
         }

@@ -27,12 +27,11 @@ namespace LeagueOfLegend.Projectiles
             projectile.magic = true;
             projectile.timeLeft = 1;
             projectile.penetrate = -1;
-            projectile.ignoreWater = true; // because Sunfire Cape emit heat wave
+            projectile.ignoreWater = true;
             projectile.tileCollide = false;
             projectile.light = 0.2f;
             projectile.aiStyle = 0;
             projectile.timeLeft = 2;
-            // projectile.Opacity = 0.5f;
         }
 
         public override void AI()
@@ -48,13 +47,12 @@ namespace LeagueOfLegend.Projectiles
             }
 
             projectile.Center = Main.LocalPlayer.Center;
-            // projectile.rotation = 10;
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(BuffID.OnFire, 1); // sets enemy on fire for 1 tick
-            projectile.vampireHeal(projectile.damage, target.Center);
+            target.AddBuff(BuffID.OnFire, 60); // sets enemy on fire for 60 ticks
+            //projectile.vampireHeal(projectile.damage, target.Center);
         }
     }
 }
