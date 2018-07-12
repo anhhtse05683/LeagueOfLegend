@@ -113,7 +113,7 @@
 	- [ ] Golem
 	- [ ] Vilemaw
 - [ ] Lane NPCs
-	- [x] Melee minion[*](#buggy-code)
+	- [x] Melee minion[**](#buggy-code)
 		- [x] Sprite
 		- [x] Code
 	- [ ] Caster minion
@@ -145,5 +145,5 @@
 	- [ ] Rift Herald (Boss)
 	- [ ] Baron Nashor (Boss)
 
-###### <a name="item"></a>These items may be implemented as weapons.
-###### <a name="buggy-code"></a>Need to be cleaned.
+###### <a name="item"></a>* These items may be implemented as weapons.
+###### <a name="buggy-code"></a>** Need to be cleaned.
