@@ -9,7 +9,10 @@ namespace LeagueOfLegend.NPCs
     {
         public override void NPCLoot(NPC npc)
         {
-            Item.NewItem((int)Main.player[npc.lastInteraction].position.X, (int)Main.player[npc.lastInteraction].position.Y, Main.player[npc.lastInteraction].width, Main.player[npc.lastInteraction].height, mod.ItemType("Gold"), (int)Math.Ceiling(npc.value / 10));
+            if (Main.player[npc.lastInteraction].active)
+            {
+                Item.NewItem((int)Main.player[npc.lastInteraction].position.X, (int)Main.player[npc.lastInteraction].position.Y, Main.player[npc.lastInteraction].width, Main.player[npc.lastInteraction].height, mod.ItemType("Gold"), (int)Math.Ceiling(npc.value / 10));
+            }
         }
     }
 }

@@ -10,21 +10,21 @@ using LeagueOfLegend.Items.AttackDamageClass;
 
 namespace LeagueOfLegend.Items.Accessories
 {
-    public class Acc_InfinityEdge : ModItem
+    public class Acc_GuinsoosRageblade : ModItem
     {
-        public const int PRICE = 3600;
+        public const int PRICE = 3300;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault(string.Format("Infinity Edge"));
-            Tooltip.SetDefault(string.Format("[c/FF8C00:+80 Attack Damage]" +
-                "\n[c/b99d66:UNIQUE Passive:] Double your critical strike chance."));
+            DisplayName.SetDefault(string.Format("Guinsoo's Rageblade"));
+            Tooltip.SetDefault(string.Format("[c/FF8C00:+25 Attack Damage]" +
+                "\n25% Attack Speed"));
         }
 
         public override void SetDefaults()
         {
-            item.value = 1;
             item.accessory = true;
+            item.value = 1;
         }
 
         public override void AddRecipes()
@@ -35,18 +35,19 @@ namespace LeagueOfLegend.Items.Accessories
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<Acc_BFSword>(), 2);
-            recipe.AddIngredient(mod.ItemType<Gold>(), PRICE - Acc_BFSword.PRICE * 2);
+            recipe.AddIngredient(mod.ItemType<Acc_Pickaxe>());
+            recipe.AddIngredient(mod.ItemType<Acc_RecurveBow>());
+            recipe.AddIngredient(mod.ItemType<Acc_AmplifyingTome>());
+            recipe.AddIngredient(mod.ItemType<Gold>(), PRICE - Acc_Pickaxe.PRICE - Acc_RecurveBow.PRICE - Acc_AmplifyingTome.PRICE);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<LeagueOfLegendPlayer>(mod).infinityEdge = true;
-
             AttackDamagePlayer modPlayer = AttackDamagePlayer.ModPlayer(player);
-            modPlayer.attackBonus += 80;
+            modPlayer.attackBonus += 25;
+            modPlayer.attackSpeed += .25f;
         }
     }
 }

@@ -1,1 +1,148 @@
 # This is a mod for Terraria ModLoader.
+
+
+## To do list
+### Items
+- [ ] Accessories
+	- [ ] Ruby Crystal
+		- [ ] Sprite
+		- [x] Code
+	- [ ] Amplifying Tome
+		- [ ] Sprite
+		- [x] Code
+	- [ ] Null-Magic Mantle
+		- [ ] Sprite
+		- [x] Code
+	- [ ] Brawler's Gloves[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Crystalline Bracer
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Negatron Cloak
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Chain Vest
+		- [ ] Sprite
+		- [x] Code
+	- [ ] Kircheis Shard[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Chalice of Harmony
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Kindlegem
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Forbidden Idol
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Executioner's Calling[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Blasting Wand[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Tear of the Goddess
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Aether Wisp
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Pickaxe[*](#)
+		- [ ] Sprite
+		- [x] Code
+	- [ ] Vampiric Scepter[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Raptor Cloak
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Boots of Swiftness
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Glacial Shroud
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Fiendish Codex
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Boots of Mobility
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Ionian Boots of Lucidity
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Bami's Cinder
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Gaint's Belt
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Recurve Bow[*](#)
+		- [ ] Sprite
+		- [x] Code*
+	- [ ] Bramble Vest
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Warden's Mail
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Stalker's Blade[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Skirmisher's Sabre[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Sheen[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Hextech Revolver[*](#)
+		- [ ] Sprite
+		- [ ] Code
+	- [ ] Berserker's Greaves
+
+###	NPCs
+- [ ] Unknown Town NPC
+- [ ] Twisted Treeline
+	- [ ] Wraith
+	- [ ] Lesser Wraith
+	- [ ] Gaint Wolf
+	- [ ] Lesser Wolf
+	- [ ] Big Golem
+	- [ ] Golem
+	- [ ] Vilemaw
+- [ ] Lane NPCs
+	- [x] Melee minion[*](#)
+		- [x] Sprite
+		- [x] Code
+	- [ ] Caster minion
+	- [ ] Super minion
+- [ ] Summoner's Rift
+	- [ ] Rift Scuttler (neutral NPCs)
+	- [ ] Gromp
+		- [ ] Sprite
+		- [ ] Code
+		- [ ] AI
+	- [ ] Blue Sentinel
+	- [ ] Wolves
+		- [ ] Greater Murk Wolf
+		- [ ] Murk Wolves
+	- [ ] Razorbeaks
+		- [ ] Crimson Raptor
+		- [ ] Raptor(s)
+	- [ ] Red Brambleback
+	- [ ] Krugs
+		- [ ] Ancient Krug
+		- [ ] Krug
+		- [ ] Lesser Krug(s)
+	- [ ] Dragons (Bosses)
+		- [ ] Cloud Drake (Boss)
+		- [ ] Infernal Drake (Boss)
+		- [ ] Mountain Drake (Boss)
+		- [ ] Ocean Drake (Boss)
+		- [ ] Elder Dragon (Dragon Boss)
+	- [ ] Rift Herald (Boss)
+	- [ ] Baron Nashor (Boss)
+
+###	<a name="end"></a>End

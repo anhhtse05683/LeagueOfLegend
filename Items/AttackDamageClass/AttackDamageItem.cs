@@ -35,12 +35,12 @@ namespace LeagueOfLegend.Items.AttackDamageClass
         public override void GetWeaponDamage(Player player, ref int damage)
         {
             // Multiplies the damage by our custom damage multiplier
-            damage = (int)((damage + AttackDamagePlayer.ModPlayer(player).attackBonus) * (AttackDamagePlayer.ModPlayer(player).attackDamage));
+            damage = (int)((damage + AttackDamagePlayer.ModPlayer(player).attackBonus) * (AttackDamagePlayer.ModPlayer(player).attackDamage + player.meleeDamage));
         }
 
         public override float MeleeSpeedMultiplier(Player player)
         {
-            return AttackDamagePlayer.ModPlayer(player).attackSpeed;
+            return AttackDamagePlayer.ModPlayer(player).attackSpeed + player.meleeSpeed;
         }
 
         public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
@@ -105,7 +105,7 @@ namespace LeagueOfLegend.Items.AttackDamageClass
         public override void GetWeaponCrit(Player player, ref int crit)
         {
             // Adds crit bonuses
-            crit = crit + AttackDamagePlayer.ModPlayer(player).attackCrit;
+            crit = crit + AttackDamagePlayer.ModPlayer(player).attackCrit + player.meleeCrit;
         }
 
         // Because we want the damage tooltip to show our custom damage, we need to modify it

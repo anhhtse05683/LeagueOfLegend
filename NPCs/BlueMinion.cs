@@ -2,16 +2,17 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using Terraria.DataStructures;
 
 namespace LeagueOfLegend.NPCs
 {
-	public class MinionBlue : ModNPC
+	public class BlueMinion : ModNPC
 	{
 
         public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Minion Azul");
-			Main.npcFrameCount[npc.type] = 2;
+			Main.npcFrameCount[npc.type] = 14;
 		}
 
 		public override void SetDefaults()
@@ -29,7 +30,7 @@ namespace LeagueOfLegend.NPCs
 			npc.HitSound = SoundID.NPCHit4;
 			npc.DeathSound = SoundID.NPCDeath6;
 			npc.value = Item.buyPrice(0, 0, 4, 9);
-            animationType = NPCID.PurpleSlime;
+            animationType = 432;
 		}
 
 		public override void HitEffect(int hitDirection, double damage)
