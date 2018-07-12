@@ -13,7 +13,7 @@
 	- [ ] Null-Magic Mantle
 		- [ ] Sprite
 		- [x] Code
-	- [ ] Brawler's Gloves[*](#)
+	- [ ] Brawler's Gloves[*](#item)
 		- [ ] Sprite
 		- [ ] Code
 	- [ ] Crystalline Bracer
@@ -25,7 +25,7 @@
 	- [ ] Chain Vest
 		- [ ] Sprite
 		- [x] Code
-	- [ ] Kircheis Shard[*](#)
+	- [ ] Kircheis Shard[*](#item)
 		- [ ] Sprite
 		- [ ] Code
 	- [ ] Chalice of Harmony
@@ -37,10 +37,10 @@
 	- [ ] Forbidden Idol
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Executioner's Calling[*](#)
+	- [ ] Executioner's Calling[*](#item)
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Blasting Wand[*](#)
+	- [ ] Blasting Wand[*](#item)
 		- [ ] Sprite
 		- [ ] Code
 	- [ ] Tear of the Goddess
@@ -49,10 +49,10 @@
 	- [ ] Aether Wisp
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Pickaxe[*](#)
+	- [ ] Pickaxe[*](#item)
 		- [ ] Sprite
 		- [x] Code
-	- [ ] Vampiric Scepter[*](#)
+	- [ ] Vampiric Scepter[*](#item)
 		- [ ] Sprite
 		- [ ] Code
 	- [ ] Raptor Cloak
@@ -79,7 +79,7 @@
 	- [ ] Gaint's Belt
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Recurve Bow[*](#)
+	- [ ] Recurve Bow[*](#item)
 		- [ ] Sprite
 		- [x] Code*
 	- [ ] Bramble Vest
@@ -88,16 +88,16 @@
 	- [ ] Warden's Mail
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Stalker's Blade[*](#)
+	- [ ] Stalker's Blade[*](#item)
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Skirmisher's Sabre[*](#)
+	- [ ] Skirmisher's Sabre[*](#item)
 		- [ ] Sprite
 		- [ ] Code
 	- [ ] Sheen[*](#)
 		- [ ] Sprite
 		- [ ] Code
-	- [ ] Hextech Revolver[*](#)
+	- [ ] Hextech Revolver[*](#item)
 		- [ ] Sprite
 		- [ ] Code
 	- [ ] Berserker's Greaves
@@ -113,7 +113,7 @@
 	- [ ] Golem
 	- [ ] Vilemaw
 - [ ] Lane NPCs
-	- [x] Melee minion[*](#)
+	- [x] Melee minion[*](#buggy-code)
 		- [x] Sprite
 		- [x] Code
 	- [ ] Caster minion
@@ -145,4 +145,5 @@
 	- [ ] Rift Herald (Boss)
 	- [ ] Baron Nashor (Boss)
 
-###	<a name="end"></a>End
+###### <a name="item"></a>These items may be implemented as weapons.
+###### <a name="buggy-code"></a>Need to be cleaned.
