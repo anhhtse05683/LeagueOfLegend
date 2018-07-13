@@ -24,7 +24,6 @@ namespace LeagueOfLegend.NPCs
 			aiType = 77;
 			npc.width = 36;
 			npc.height = 44;
-			//animationType = 482;
 			npc.aiStyle = 3;
 			npc.npcSlots = 0.9f;
 			npc.HitSound = SoundID.NPCHit4;
